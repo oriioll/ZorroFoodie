@@ -27,7 +27,7 @@ header {
   position: sticky;
   top: 0;
   background-color: rgba(255, 255, 255, 0.001); /* casi invisible pero bloquea */
-  z-index: 1010;
+  z-index: 1000;
   background: linear-gradient(135deg, #b34700 40%, #fb761d 100%);
   background-size: 100% 300vh;
  background-position: 0 0vh;
@@ -45,7 +45,8 @@ header::after {
   left: 0;
   width: 100%;
   pointer-events: none;
-  z-index: 11;
+  z-index: 1001;
+
 }
 
 header::before {
@@ -56,6 +57,11 @@ header::before {
     rgba(251, 118, 19, 0.35) 0%,
     rgba(251, 118, 19, 0) 100%
   );
+}
+header a:hover svg {
+  stroke: #ff8800;
+  transform: scale(1.1);
+  transition: all 0.2s ease;
 }
 
 header::after {
@@ -77,6 +83,9 @@ main {
   align-items: center;
   justify-content: flex-start;
   position: relative;
+  background: linear-gradient(135deg, #b34700 40%, #fb761d 100%);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 
 .title {
@@ -93,6 +102,8 @@ main {
   top: -35%;
   padding-top: 2vh;
   z-index: 1050;
+  pointer-events: none;
+
 
 }
 
@@ -120,13 +131,14 @@ header svg:hover {
 }
 /* NUEVOS ESTILOS PARA EL BOTÓN DE SCROLL */
 .scroll-container {
-  position: absolute; /* Cambiado de absolute a fixed */
-  bottom: 5vh; /* Posición más manejable */
-  left: 49%;
-  bottom: 130vh;
-  transform: translateX(-50%);
-  z-index: 100; /* Mayor que el header (10) y título (50) */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: -25vh; /* Ajusta este valor para que el botón quede justo debajo del título */
+  margin-bottom: 25vh;
   cursor: pointer;
+  z-index: 100;
+  position: static;
 }
 
 .scroll-button {
@@ -138,28 +150,17 @@ header svg:hover {
   align-items: center;
   justify-content: center;
   transition: all 0.3s;
+  position: relative;
+  z-index: 900;
 }
 
 .scroll-button:hover {
   background-color: rgba(255, 255, 255, 0.3);
   transform: scale(1.1);
+  cursor: pointer;
 }
 
-.scroll-button svg {
-  pointer-events: none;
-}
 
-  /* MEDIA QUERIES */
-@media (max-width: 768px) {
-  .scroll-container {
-    left: 46%;
-  }
-
-  .title {
-    font-size: 4rem;
-    top: -33%;
-  }
-}
 
 .content h1 {
     font-family: 'Montserrat', sans-serif; /* Moderna y versátil */
@@ -187,4 +188,22 @@ header svg:hover {
   width: auto;
   background-color: #232323;
   border-radius: 10px;
+}
+
+
+  /* MEDIA QUERIES */
+@media (max-width: 768px) {
+
+
+  .title {
+    font-size: 4rem;
+    top: -33%;
+  }
+  header {
+    height: 25vh;
+  
+  }
+  .content h1 {
+    font-size: 2rem;
+  }
 }
