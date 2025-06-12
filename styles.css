@@ -108,7 +108,8 @@ main {
   top: -35%;
   padding-top: 2vh;
   z-index: 1050;
-  pointer-events: none;
+  pointer-events: none;    
+    font-family: 'Montserrat', sans-serif; /* Moderna y versátil */
 
 
 }
@@ -177,16 +178,27 @@ header svg:hover {
     margin-top: 10vh;
 }
 
+
 .video-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 20px;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
+  gap: 20px; /* espacio entre vídeos */
+  margin-top: 2rem;
 }
+.video-grid iframe {
+  width: 320px; /* tamaño base del video */
+  height: 570px;
+  border-radius: 12px;
+  border: solid 2px #ff8800;
+  box-shadow: 0 4px 15px rgba(255, 136, 0, .7);
+  transition: transform 0.3s ease;
+}
+
+.video-grid iframe:hover {
+  transform: scale(1.03);
+}
+
 
 .video {
   height: auto;
@@ -247,3 +259,17 @@ footer {
 }
 
 
+@media (max-width: 768px) {
+  body {
+    background: linear-gradient(135deg, #ff7215 80%, #ff6d0c 100%);
+  }
+
+  header {
+    background: linear-gradient(135deg, #ff7215 80%, #ff6d0c 100%);
+    background-size: 100% 300vh;
+  }
+
+  main {
+    background: linear-gradient(135deg, #ff7215 80%, #ff6d0c 100%);
+  }
+}
