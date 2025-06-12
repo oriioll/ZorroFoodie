@@ -235,9 +235,14 @@ footer {
     font-size: 2rem;
   }
   img {
-    width: 150px;
-    height: 150px;
-    margin-top: 10px;
+    width: 125px;
+    height: 125px;
+    margin-top: 0px;
+    
+  }
+  footer {
+    
+    font-size: 0.9rem;
   }
 }
 
