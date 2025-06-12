@@ -227,10 +227,13 @@ footer {
 
   /* MEDIA QUERIES */
 @media (max-width: 768px) {
-
+  iframe {
+    height: 300px;
+    width: auto;
+  }
 
   .title {
-    font-size: 4rem;
+    font-size: 3.8rem;
     top: -22vh;
     min-height: 70vh;
   }
