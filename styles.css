@@ -1,0 +1,190 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, serif;
+  margin: 0;
+  padding: 0;
+  /*background: linear-gradient(135deg, #fb761d 80%, #b34700 100%);*/
+  background: linear-gradient(135deg, #b34700 40%, #fb761d 100%);
+   background-size: 100% 300vh; /* esto es clave */
+   background-repeat: no-repeat;
+  box-sizing: border-box;
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  color: white;
+  overscroll-behavior: none;
+}
+
+
+header {
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 20px;
+  justify-content: center;
+  gap: 25px;
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.001); /* casi invisible pero bloquea */
+  z-index: 1010;
+  background: linear-gradient(135deg, #b34700 40%, #fb761d 100%);
+  background-size: 100% 300vh;
+ background-position: 0 0vh;
+  background-repeat: no-repeat;
+  transition: box-shadow 0.3s ease;
+
+}
+header.scrolled::after {
+  opacity: 1;
+}
+header::before,
+header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 11;
+}
+
+header::before {
+  top: -18px;
+  height: 18px;
+  background: linear-gradient(
+    to top,  
+    rgba(251, 118, 19, 0.35) 0%,
+    rgba(251, 118, 19, 0) 100%
+  );
+}
+
+header::after {
+    opacity: 0;
+  transition: opacity 0.3s; 
+  bottom: -18px;
+  height: 18px;
+  background: linear-gradient(
+    to bottom,
+    rgba(251, 118, 19, 0.35) 0%,
+    rgba(251, 118, 19, 0) 100%
+  );
+}
+main {
+  min-height: 180vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.title {
+  margin-top: -12vh;
+  min-height: 90vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  font-size: 5rem;
+  position: sticky;
+  top: -35%;
+  padding-top: 2vh;
+  z-index: 50;
+
+}
+
+.content {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  text-align: center;
+  overflow-y: auto;
+}
+
+header svg {
+  transition: transform 0.3s;
+}
+
+header svg:hover {
+  transform: scale(1.15);
+}
+.content h1:hover {
+  cursor: pointer;
+}
+/* NUEVOS ESTILOS PARA EL BOTÓN DE SCROLL */
+.scroll-container {
+  position: absolute; /* Cambiado de absolute a fixed */
+  bottom: 5vh; /* Posición más manejable */
+  left: 50%;
+  bottom: 130vh;
+  transform: translateX(-50%);
+  z-index: 100; /* Mayor que el header (10) y título (50) */
+  cursor: pointer;
+}
+
+.scroll-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.scroll-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.scroll-button svg {
+  pointer-events: none;
+}
+
+  /* MEDIA QUERIES */
+@media (max-width: 768px) {
+  .scroll-container {
+    left: 46%;
+  }
+
+  .title {
+    font-size: 4rem;
+    top: -33%;
+  }
+}
+
+.content h1 {
+    font-family: 'Montserrat', sans-serif; /* Moderna y versátil */
+    font-weight: 600;
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10vh;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.video {
+  height: auto;
+  padding: 100px;
+  width: auto;
+  background-color: #232323;
+  border-radius: 10px;
+}
