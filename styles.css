@@ -92,7 +92,7 @@ main {
   position: sticky;
   top: -35%;
   padding-top: 2vh;
-  z-index: 50;
+  z-index: 1050;
 
 }
 
@@ -122,7 +122,7 @@ header svg:hover {
 .scroll-container {
   position: absolute; /* Cambiado de absolute a fixed */
   bottom: 5vh; /* Posición más manejable */
-  left: 50%;
+  left: 49%;
   bottom: 130vh;
   transform: translateX(-50%);
   z-index: 100; /* Mayor que el header (10) y título (50) */
