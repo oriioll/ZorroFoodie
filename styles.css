@@ -233,10 +233,11 @@ footer {
   }
 
   .title {
-    font-size: 3.8rem;
+    font-size: 3.2rem;
     top: -22vh;
     min-height: 70vh;
   }
+
   header {
     height: 25vh;
     gap: 20px;
