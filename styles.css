@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   /*background: linear-gradient(135deg, #fb761d 80%, #b34700 100%);*/
-  background: linear-gradient(135deg, #b34700 40%, #fb761d 100%);
+background: linear-gradient(135deg, #ff7215 80%, #ff6d0c 100%);
    background-size: 100% 300vh; /* esto es clave */
    background-repeat: no-repeat;
   box-sizing: border-box;
@@ -34,7 +34,7 @@ header {
   top: 0;
   background-color: rgba(255, 255, 255, 0.001); /* casi invisible pero bloquea */
   z-index: 1000;
-  background: linear-gradient(135deg, #b34700 40%, #fb761d 100%);
+background: linear-gradient(135deg, #ff7215 80%, #ff6d0c 100%);
   background-size: 100% 300vh;
  background-position: 0 0vh;
   background-repeat: no-repeat;
@@ -65,7 +65,7 @@ header::before {
   );
 }
 header a:hover svg {
-  stroke: #ff8800;
+  stroke: #ffbb00;
   transform: scale(1.1);
   transition: all 0.2s ease;
 }
@@ -89,7 +89,7 @@ main {
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  background: linear-gradient(135deg, #b34700 40%, #fb761d 100%);
+background: linear-gradient(135deg, #ff7215 80%, #ff6d0c 100%);
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
