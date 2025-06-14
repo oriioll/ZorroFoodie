@@ -20,6 +20,7 @@ img {
   border-radius: 50%;
   margin-top: 20px;
   position: absolute;
+  z-index: 999; /* Asegurar que esté por debajo del título */
 }
 
 header {
@@ -225,7 +226,40 @@ footer {
     transition: color 0.3s ease;
   }
 
-  /* MEDIA QUERIES */
+/* AJUSTES ESPECÍFICOS PARA RESOLUCIONES PROBLEMÁTICAS */
+
+/* Pantallas de laptop/escritorio medianas (1024px - 1400px) */
+@media (max-width: 1400px) and (min-width: 1024px) {
+  .title {
+    top: -30%; /* Menos agresivo en estas resoluciones */
+  }
+  
+  img {
+    width: 200px;
+    height: 200px;
+    margin-top: 15px;
+  }
+}
+
+/* Tablets horizontales y ventanas redimensionadas (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .title {
+    top: -25%; /* Aún menos agresivo */
+    font-size: 4.2rem;
+  }
+  
+  img {
+    width: 180px;
+    height: 180px;
+    margin-top: 10px;
+  }
+  
+  header {
+    gap: 20px;
+  }
+}
+
+  /* MEDIA QUERIES ORIGINALES */
 @media (max-width: 768px) {
   iframe {
     height: 300px;
@@ -253,12 +287,31 @@ footer {
   img {
     width: 125px;
     height: 125px;
-    margin-top: 0px;
+    margin-top: 0px; /* Reducir margen en móvil para evitar solapamiento */
     
   }
   footer {
     
     font-size: 0.9rem;
+  }
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 480px) {
+  .title {
+    font-size: 2.8rem;
+    top: -18vh; /* Menos agresivo en pantallas muy pequeñas */
+  }
+  
+  img {
+    width: 100px;
+    height: 100px;
+    margin-top: -5px; /* Ajuste fino para pantallas pequeñas */
+  }
+  
+  header {
+    gap: 15px;
+    padding-top: 15px;
   }
 }
 
