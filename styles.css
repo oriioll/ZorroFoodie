@@ -106,7 +106,7 @@ background: linear-gradient(135deg, #ff7215 80%, #ff6d0c 100%);
   flex-direction: column;
   font-size: 5rem;
   position: sticky;
-  top: -35%;
+  top: -40%;
   padding-top: 2vh;
   z-index: 1050;
   pointer-events: none;    
